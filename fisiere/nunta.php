@@ -1,3 +1,5 @@
+
+
 <?php
 $file1 = fopen('users.txt', 'r') or die("Nu am putut deschide fisierul");
 $file2 = fopen("users2.txt", "r") or die("Nu am putut deschide fisierul");
@@ -17,12 +19,12 @@ while(!feof($file2)){
 }
 
 asort($invitati);
-var_dump($invitati);
 // de sortat invitatii
 // de scris in fisier3
 foreach($invitati as $invitat){
     if(trim($invitat)){
         $invitat = str_replace("\n", "", $invitat);
+        echo $invitat . "<br>";
         fwrite($file3, $invitat . "\n");
     }
 }
@@ -35,7 +37,7 @@ echo "invitati:" . count($invitati);
 
 // sa imparta invitatii pe mese.
 // sa afiseze cine ramane pe dinafara
-
+// sa caute fisiere noi (pana la 10) sa citeasca din ele si sa sorteze si sa scrie in nunta.txt
 
 
 
